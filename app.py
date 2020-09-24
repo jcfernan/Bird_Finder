@@ -17,9 +17,9 @@ def location(query):
 @app.route('/observations/<lat>/<lng>/<dist>/<daysback>/<maxresults>/<species>')
 def observations(lat, lng, dist, daysback, maxresults, species=None):
     token = 'cn9j4ts7dra2'
-    url = 'https://api.ebird.org/v2/data/obs/geo/recent?lat={{lat}}&lng={{lng}}'
+    url = 'https://api.ebird.org/v2/data/obs/geo/recent?fmt=json'
     if species:
-        url = 'https://api.ebird.org/v2/data/obs/geo/recent/' + species + '?lat={{lat}}&lng={{lng}}'
+        url = 'https://api.ebird.org/v2/data/obs/geo/recent/' + species + 'fmt=json'
     url += '&dist=' + dist
     url += '&back=' + daysback
     url += '&maxResults=' + maxresults
@@ -30,7 +30,7 @@ def observations(lat, lng, dist, daysback, maxresults, species=None):
     r = requests.get(url, headers={'X-eBirdApiToken': token})
     return Response(r.text, mimetype='text/json')
 
-
+ 
 @app.route('/')
 def root():
     return redirect(url_for('static', filename='index.html'))
