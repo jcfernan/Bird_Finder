@@ -5,12 +5,12 @@ title {
 
 th {
     text-align: center;
-    background-color: #607a9c;
-    color: #ffffff;
+    background-color: hsl(207, 38%, 25%);
+    color: hsl(0, 0%, 93%);
 }
 
 tr.mouseover {
-    background-color: #ffff55;
+    background-color: hsl(40, 100%, 51%);
 }
 
 td.hidden {
@@ -23,14 +23,17 @@ td.hidden {
     width: 40%;
     height: 95%;
     overflow-y: auto;
+    margin-top: 1em;
 }
 
 #birds table {
     width: 100%;
+    margin-top: 1em;
 }
 
 #map {
     float: right;
     width: 60%;
     height: 95%;
+    margin-top: 2em;
 }

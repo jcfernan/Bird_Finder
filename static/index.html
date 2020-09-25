@@ -97,7 +97,7 @@ crossorigin=""></script>
             var marker = L.marker(latLng);
             markersLayer.addLayer(marker);
 
-            marker.bindPopup(markerLocations[loc].join(", "));
+            marker.bindPopup(markerLocations[loc].join(" || "));
             marker.on("click", function(e) {
                 e.target.openPopup();
             });
@@ -205,7 +205,7 @@ crossorigin=""></script>
 </script>
 </head>
 <body>
-<div id="controls">
+<div id="controls" style="margin-top: 1em; margin-bottom: 1em;">
     <label>Number of Results:</label>
     <select id="maxResults">
     <option value="25">25</option>
@@ -223,7 +223,7 @@ crossorigin=""></script>
     | <input id="selectedLocation" type="text" size=20></input>
     <button id="goToLocation">Go to location</button>
     | <button id="filterBySpecies">Filter by species</button>
-    <em id="pleasewait">Please wait whilst we retrieve results...</em></div>
+    <em id="pleasewait">Please wait while we retrieve results...</em></div>
 </div>
 <div id="birds"></div>
 <div id="map"></div>
