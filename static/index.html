@@ -6,7 +6,7 @@ Leaflet API: https://leafletjs.com/reference.html
 <html>
 <head>
 <title>Bird Finder</title>
-<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" type="text/css" href= "main.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 crossorigin=""/>
@@ -14,6 +14,9 @@ crossorigin=""/>
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 crossorigin=""></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../favicon.png">
+
 <script>
     // start at Evergreen Lake, CO
     var DEFAULT_LAT = 39.6320;
@@ -46,6 +49,7 @@ crossorigin=""></script>
 
         if (filterEnabled && filterSpecies) {
             url += "/" + filterSpecies
+            // url += "/" + String(sightings[i].speciesCode)
         }
 
         $("#pleasewait").show();
@@ -71,6 +75,7 @@ crossorigin=""></script>
             var name = sightings[i].comName;
             var lat = sightings[i].lat;
             var lng = sightings[i].lng;
+            // var code= sightings[i].speciesCode
 
             var latLng = L.latLng([lat, lng]);
             if (latLng in markerLocations) {
@@ -126,7 +131,7 @@ crossorigin=""></script>
             var lat = Number($(this).children()[2].innerHTML);
             var lng = Number($(this).children()[3].innerHTML);
             var latLng = L.latLng([lat, lng]);
-            filterSpecies = $(this).children()[4].innerHTML;
+            filterSpecies = ($(this).children()[4].innerHTML);
 
             var marker = null;
             var minDistance = Number.MAX_VALUE;
@@ -171,7 +176,7 @@ crossorigin=""></script>
             $.ajax({
             url: "/location/" + location.value
             }).done(function(results){
-            // Feeling lucky, I guess...
+        
             if (results.length > 0) {
                 map.panTo([results[0].lat, results[0].lon]);
                 plotBirds(map);
@@ -207,7 +212,7 @@ crossorigin=""></script>
 <body>
 <div id="controls" style="margin-top: 1em; margin-bottom: 1em;">
     <label>Number of Results:</label>
-    <select id="maxResults">
+    <select id="maxResults" style="background-color: FAFAFA;">
     <option value="25">25</option>
     <option value="50">50</option>
     <option value="100" selected="selected">100</option>
@@ -218,10 +223,10 @@ crossorigin=""></script>
     <option value="1000">1000</option>
     </select>
     <label>| Days back:</label>
-    <select id="daysBack">
+    <select id="daysBack" style="background-color: FAFAFA;">
     </select>
     | <input id="selectedLocation" type="text" size=20></input>
-    <button id="goToLocation">Go to location</button>
+    <button id="goToLocation" >Go to location</button>
     | <button id="filterBySpecies">Filter by species</button>
     <em id="pleasewait">Please wait while we retrieve results...</em></div>
 </div>

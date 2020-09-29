@@ -1,3 +1,10 @@
+
+
+body{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    background-color: hsl(0, 0%, 92%;
+}
 title {
     font-size: 125%;
     margin: 0px;
@@ -23,17 +30,29 @@ td.hidden {
     width: 40%;
     height: 95%;
     overflow-y: auto;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 #birds table {
     width: 100%;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 #map {
     float: right;
     width: 60%;
     height: 95%;
-    margin-top: 2em;
+    margin-top: 1em;
+}
+
+button {
+    font-family: 'Philosopher', sans-serif;
+    background-color: 8C705F;
+    color: EDEDED;
+    font-size: 15px;
+    padding: 3px 6px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
 }
