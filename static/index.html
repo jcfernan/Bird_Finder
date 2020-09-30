@@ -1,8 +1,8 @@
 <!--
-
 eBird API: https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest
 Leaflet API: https://leafletjs.com/reference.html
 -->
+
 <html>
 <head>
 <title>Bird Finder</title>
@@ -210,27 +210,28 @@ crossorigin=""></script>
 </script>
 </head>
 <body>
-<div id="controls" style="margin-top: 1em; margin-bottom: 1em;">
-    <label>Number of Results:</label>
-    <select id="maxResults" style="background-color: FAFAFA;">
-    <option value="25">25</option>
-    <option value="50">50</option>
-    <option value="100" selected="selected">100</option>
-    <option value="200">200</option>
-    <option value="200">300</option>
-    <option value="200">400</option>
-    <option value="500">500</option>
-    <option value="1000">1000</option>
-    </select>
-    <label>| Days back:</label>
-    <select id="daysBack" style="background-color: FAFAFA;">
-    </select>
-    | <input id="selectedLocation" type="text" size=20></input>
-    <button id="goToLocation" >Go to location</button>
-    | <button id="filterBySpecies">Filter by species</button>
-    <em id="pleasewait">Please wait while we retrieve results...</em></div>
-</div>
-<div id="birds"></div>
-<div id="map"></div>
+    <h1>Bird Finder</h1>
+    <div id="controls" style="margin-top: 2em; margin-bottom: 1rem;">
+        <label>Number of Results:</label>
+        <select id="maxResults" style="background-color: FAFAFA; padding: 2px 1px;">
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100" selected="selected">100</option>
+        <option value="200">200</option>
+        <option value="200">300</option>
+        <option value="200">400</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        </select>
+        <label>| Days back:</label>
+        <select id="daysBack" style="background-color: FAFAFA; padding: 2px 1px;">
+        </select>
+        | <input id="selectedLocation" type="text" size=20 style="padding: 2px 1px;"></input>
+        <button id="goToLocation" >Go to location</button>
+        | <button id="filterBySpecies">Filter by species</button>
+        <em id="pleasewait">Please wait while we retrieve results...</em></div>
+    </div>
+    <div id="birds"></div>
+    <div id="map"></div>
 </body>
 </html>

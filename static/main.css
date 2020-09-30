@@ -2,22 +2,26 @@
 
 body{
     font-family: 'Philosopher', sans-serif;
-    font-size: 18px;
-    background-color: hsl(0, 0%, 92%;
+    font-size: 20px;
+    background-color: hsl(0, 0%, 92%)
 }
 title {
     font-size: 125%;
     margin: 0px;
 }
 
+tr {
+    font-size: 18px;
+}
+
 th {
     text-align: center;
-    background-color: hsl(207, 38%, 25%);
+    background-color: hsl(207, 38%, 37%);
     color: hsl(0, 0%, 93%);
 }
 
 tr.mouseover {
-    background-color: hsl(40, 100%, 51%);
+    background-color: hsl(74, 43%, 65%);
 }
 
 td.hidden {
@@ -35,14 +39,15 @@ td.hidden {
 
 #birds table {
     width: 100%;
-    /* margin-top: 1em; */
+    margin-top: 1em;
+    font-size: 18px;
 }
 
 #map {
     float: right;
     width: 60%;
     height: 95%;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 button {
@@ -55,4 +60,11 @@ button {
     display: inline-block;
     cursor: pointer;
 }
+
+h1{
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+    text-shadow: 1px 1px 2px grey;
+
 }
