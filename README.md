@@ -12,7 +12,7 @@ I decided to create this app.  WIth this app you will be able to view on a
 map the location of recent bird sightings based on  a given geographic location.  
 The maps are generated using [leaflet](http://leafletjs.com/) and
 [openstreetmap](https://openstreetmap.org) data. To obtain recent bird sighting 
-data I used [ebird-API](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest)
+data I used the [ebird-API](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest).
 
 <img src="Screen_Shot.png" width="800">
 
