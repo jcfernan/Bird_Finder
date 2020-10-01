@@ -211,9 +211,9 @@ crossorigin=""></script>
 </head>
 <body>
     <h1>Bird Finder</h1>
-    <div id="controls" style="margin-left: 1em; margin-bottom: 1rem;">
+    <div id="controls" style="margin-left: 1em; margin-bottom: 1rem; border-radius: 5px">
         <label>Number of Results:</label>
-        <select id="maxResults" style="background-color: FAFAFA; padding: 2px 1px;">
+        <select id="maxResults" style="background-color: FAFAFA; padding: 2px 1px; border-radius: 5px;">
         <option value="25">25</option>
         <option value="50">50</option>
         <option value="100" selected="selected">100</option>
@@ -224,11 +224,11 @@ crossorigin=""></script>
         <option value="1000">1000</option>
         </select>
         <label>| Days back:</label>
-        <select id="daysBack" style="background-color: FAFAFA; padding: 2px 1px;">
+        <select id="daysBack" style="background-color: FAFAFA; padding: 2px 1px; border-radius: 5px">
         </select>
-        | <input id="selectedLocation" type="text" size=20 style="padding: 2px 1px;"></input>
-        <button id="goToLocation" >Go to location</button>
-        | <button id="filterBySpecies">Filter by species</button>
+        | <input id="selectedLocation" type="text" size=20 style="padding: 2px 1px; border-radius: 5px"></input>
+        <button id="goToLocation" style="border-radius: 5px">Go to location</button>
+        | <button id="filterBySpecies" style="border-radius: 5px">Filter by species</button>
         <em id="pleasewait">Please wait while we retrieve results...</em></div>
     </div>
     <div id="birds"></div>
